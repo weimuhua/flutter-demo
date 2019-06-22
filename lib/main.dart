@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'home_page.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -20,21 +22,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        body: Center(
-          child: Container(
-            child: Text(
-              "Batman Bruce Wayne",
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 18.0, color: Colors.lightBlue),
-            ),
-            alignment: Alignment.center,
-            width: 300.0,
-            height: 300.0,
-            color: Colors.lightGreen,
-          ),
-        ),
-      ),
+      home: MyAppPage(),
     );
   }
 }
