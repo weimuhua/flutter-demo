@@ -36,7 +36,9 @@ class _SampleAppPageState extends State<MyAppPage> {
         child: _getToggleChild(),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _toggle,
+        onPressed: () {
+          Navigator.pushNamed(context, "/MyPage");
+        },
         tooltip: 'Update Text',
         child: Icon(Icons.update),
       ),
