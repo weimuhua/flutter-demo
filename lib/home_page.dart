@@ -9,38 +9,26 @@ class MyAppPage extends StatefulWidget {
 }
 
 class _SampleAppPageState extends State<MyAppPage> {
-  // Default value for toggle
-  bool toggle = true;
-
-  void _toggle() {
-    setState(() {
-      toggle = !toggle;
-    });
-  }
-
-  _getToggleChild() {
-    if (toggle) {
-      return Text('Toggle One');
-    } else {
-      return MaterialButton(onPressed: () {}, child: Text('Toggle Two'));
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Sample App"),
       ),
-      body: Center(
-        child: _getToggleChild(),
+      body: ListView(
+        children: <Widget>[
+          Text('List Row One', style: new TextStyle(fontSize: 20)),
+          Text('List Row Two', style: new TextStyle(fontSize: 20)),
+          Text('List Row Three', style: new TextStyle(fontSize: 20)),
+          Text('List Row Four', style: new TextStyle(fontSize: 20)),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.pushNamed(context, "/MyPage");
         },
-        tooltip: 'Update Text',
-        child: Icon(Icons.update),
+        tooltip: 'jump to another page',
+        child: Icon(Icons.navigate_next),
       ),
     );
   }
