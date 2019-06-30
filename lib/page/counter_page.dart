@@ -8,7 +8,7 @@ class CounterPage extends StatelessWidget {
     final bloc = CountBLoC();
     return Scaffold(
       appBar: AppBar(
-        title: Text('Top Page'),
+        title: Text('BLoC Page'),
       ),
       body: Center(
         child: StreamBuilder<int>(

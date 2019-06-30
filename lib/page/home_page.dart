@@ -5,6 +5,7 @@ class MyAppPage extends StatelessWidget {
   static const list_page = 0;
   static const counter_page = 1;
   static const my_page = 2;
+  static const provider_page = 3;
 
   List pages = <String>[];
 
@@ -14,7 +15,7 @@ class MyAppPage extends StatelessWidget {
 
     return new Scaffold(
         appBar: AppBar(
-          title: Text("Sample App"),
+          title: Text("Flutter Sample App"),
         ),
         body: new Center(
             child: new ListView.builder(
@@ -41,6 +42,9 @@ class MyAppPage extends StatelessWidget {
           case my_page:
             Navigator.pushNamed(context, "/MyPage");
             break;
+          case provider_page:
+            Navigator.pushNamed(context, "/ProviderPage");
+            break;
         }
       },
     );
@@ -50,5 +54,6 @@ class MyAppPage extends StatelessWidget {
     pages.add("ListPage");
     pages.add("CounterPage");
     pages.add("MyPage");
+    pages.add("ProviderPage");
   }
 }

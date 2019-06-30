@@ -23,7 +23,7 @@ class _SampleAppPageState extends State<ListViewPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Sample App"),
+        title: Text("List Page"),
       ),
       body: ListView.builder(
         itemBuilder: (BuildContext context, int pos) {
