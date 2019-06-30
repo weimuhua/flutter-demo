@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-
-import 'home_page.dart';
-import 'my_page.dart';
+import 'package:flutter_demo/page/counter_page.dart';
+import 'package:flutter_demo/page/home_page.dart';
+import 'package:flutter_demo/page/list_page.dart';
+import 'package:flutter_demo/page/my_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,7 +16,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyAppPage(),
-      routes: <String, WidgetBuilder>{'/MyPage': (context) => new MyPage()},
+      routes: <String, WidgetBuilder>{
+        '/MyPage': (context) => new MyPage(),
+        '/ListPage': (context) => new ListViewPage(),
+        '/CounterPage': (context) => new CounterPage()
+      },
     );
   }
 }

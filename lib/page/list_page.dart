@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class MyAppPage extends StatefulWidget {
+class ListViewPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return _SampleAppPageState();
   }
 }
 
-class _SampleAppPageState extends State<MyAppPage> {
+class _SampleAppPageState extends State<ListViewPage> {
   List widgets = <Widget>[];
 
   @override

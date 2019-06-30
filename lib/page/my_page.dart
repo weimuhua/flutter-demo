@@ -10,7 +10,7 @@ class MyPage extends StatelessWidget {
         ),
         body: new Center(
           child: new RaisedButton(
-            onPressed: null,
+            onPressed: () => Navigator.pushNamed(context, "/ListPage"),
             child: new Text('Launch second screen'),
           ),
         ),
