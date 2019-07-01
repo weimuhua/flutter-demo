@@ -6,11 +6,11 @@ class MyPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: AppBar(
-          title: Text("Sample App"),
+          title: Text("My Page"),
         ),
         body: new Center(
           child: new RaisedButton(
-            onPressed: null,
+            onPressed: () => Navigator.pushNamed(context, "/ListPage"),
             child: new Text('Launch second screen'),
           ),
         ),
