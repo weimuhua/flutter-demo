@@ -8,6 +8,7 @@ class MyAppPage extends StatelessWidget {
   static const my_page = 2;
   static const provider_page = 3;
   static const stack_page = 4;
+  static const column_page = 5;
 
   List pages = <String>[];
 
@@ -50,6 +51,9 @@ class MyAppPage extends StatelessWidget {
           case stack_page:
             Navigator.pushNamed(context, Constant.route_stack_page);
             break;
+          case column_page:
+            Navigator.pushNamed(context, Constant.route_column_page);
+            break;
         }
       },
     );
@@ -61,5 +65,6 @@ class MyAppPage extends StatelessWidget {
     pages.add("MyPage");
     pages.add("ProviderPage");
     pages.add("StackPage");
+    pages.add("ColumnPage");
   }
 }
