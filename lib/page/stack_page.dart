@@ -1,18 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/widget/backgroud_widget.dart';
+import 'package:flutter_demo/widget/background_decoration.dart';
 
 class StackPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
-      color: Color(0xFF080324),
+      decoration: BackgroundHelper.getCommonDecoration(),
       child: new Stack(
         children: <Widget>[
+          new BackgroundWidget(),
           new Align(
             alignment: FractionalOffset.center,
-            heightFactor: 40.0,
-            widthFactor: 40.0,
             child: new Image.network(
               //加载网络图片
               'https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/'
@@ -21,7 +21,6 @@ class StackPage extends StatelessWidget {
               width: 300.0,
             ),
           ),
-          new BackgroundWidget(),
           Container(
             alignment: FractionalOffset.bottomLeft,
             child: new Opacity(
