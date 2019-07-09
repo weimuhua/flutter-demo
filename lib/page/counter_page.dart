@@ -3,6 +3,10 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_demo/data/count_bloc.dart';
 
 class CounterPage extends StatelessWidget {
+  final initCount;
+
+  CounterPage(this.initCount);
+
   @override
   Widget build(BuildContext context) {
     final bloc = CountBLoC();
@@ -16,7 +20,7 @@ class CounterPage extends StatelessWidget {
             initialData: bloc.value,
             builder: (BuildContext context, AsyncSnapshot<int> snapshot) {
               return Text(
-                'You hit me: ${snapshot.data} times',
+                'You hit me: ${initCount + snapshot.data} times',
                 style: Theme.of(context).textTheme.display1,
               );
             }),

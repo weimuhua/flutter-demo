@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_demo/data/constant.dart';
 
+import 'counter_page.dart';
+
 class MyAppPage extends StatelessWidget {
   static const list_page = 0;
   static const counter_page = 1;
@@ -40,7 +42,10 @@ class MyAppPage extends StatelessWidget {
             Navigator.pushNamed(context, Constant.route_list_page);
             break;
           case counter_page:
-            Navigator.pushNamed(context, Constant.route_counter_page);
+//            Navigator.pushNamed(context, Constant.route_counter_page);
+            Navigator.of(context).push(new MaterialPageRoute(builder: (_) {
+              return new CounterPage(666);
+            }));
             break;
           case my_page:
             Navigator.pushNamed(context, Constant.route_my_page);

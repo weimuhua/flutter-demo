@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
           routes: <String, WidgetBuilder>{
             Constant.route_my_page: (context) => new MyPage(),
             Constant.route_list_page: (context) => new ListViewPage(),
-            Constant.route_counter_page: (context) => new CounterPage(),
+//            Constant.route_counter_page: (context) => new CounterPage(),
             Constant.route_provider_page: (context) => new ProviderPage(),
             Constant.route_stack_page: (context) => new StackPage(),
             Constant.route_column_page: (context) => new ColumnPage(),
