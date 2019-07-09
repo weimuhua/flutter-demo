@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_demo/data/constant.dart';
 
 class MyAppPage extends StatelessWidget {
   static const list_page = 0;
   static const counter_page = 1;
   static const my_page = 2;
   static const provider_page = 3;
+  static const stack_page = 4;
+  static const column_page = 5;
 
   List pages = <String>[];
 
@@ -34,16 +37,22 @@ class MyAppPage extends StatelessWidget {
       onTap: () {
         switch (i) {
           case list_page:
-            Navigator.pushNamed(context, "/ListPage");
+            Navigator.pushNamed(context, Constant.route_list_page);
             break;
           case counter_page:
-            Navigator.pushNamed(context, "/CounterPage");
+            Navigator.pushNamed(context, Constant.route_counter_page);
             break;
           case my_page:
-            Navigator.pushNamed(context, "/MyPage");
+            Navigator.pushNamed(context, Constant.route_my_page);
             break;
           case provider_page:
-            Navigator.pushNamed(context, "/ProviderPage");
+            Navigator.pushNamed(context, Constant.route_provider_page);
+            break;
+          case stack_page:
+            Navigator.pushNamed(context, Constant.route_stack_page);
+            break;
+          case column_page:
+            Navigator.pushNamed(context, Constant.route_column_page);
             break;
         }
       },
@@ -55,5 +64,7 @@ class MyAppPage extends StatelessWidget {
     pages.add("CounterPage");
     pages.add("MyPage");
     pages.add("ProviderPage");
+    pages.add("StackPage");
+    pages.add("ColumnPage");
   }
 }
