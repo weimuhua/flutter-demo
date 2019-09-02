@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/data/counter_model.dart';
 import 'package:flutter_demo/page/column_page.dart';
-import 'package:flutter_demo/page/counter_page.dart';
+import 'package:flutter_demo/page/expaned_page.dart';
 import 'package:flutter_demo/page/home_page.dart';
 import 'package:flutter_demo/page/list_page.dart';
 import 'package:flutter_demo/page/my_page.dart';
@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
             Constant.route_provider_page: (context) => new ProviderPage(),
             Constant.route_stack_page: (context) => new StackPage(),
             Constant.route_column_page: (context) => new ColumnPage(),
+            Constant.route_expanded_page: (context) => new ExpandedPage(),
           },
         ));
   }
