@@ -19,17 +19,23 @@ class MyAppPage extends StatelessWidget {
   Widget build(BuildContext context) {
     createContent();
 
-    return new Scaffold(
-        appBar: AppBar(
-          title: Text("Flutter Sample App"),
-        ),
-        body: new Center(
-            child: new ListView.builder(
-          itemBuilder: (BuildContext context, int pos) {
-            return getRow(context, pos);
-          },
-          itemCount: pages.length,
-        )));
+    return WillPopScope(
+      onWillPop: () async {
+        debugPrint("onWillPop");
+        return false;
+      },
+      child: new Scaffold(
+          appBar: AppBar(
+            title: Text("Flutter Sample App"),
+          ),
+          body: new Center(
+              child: new ListView.builder(
+            itemBuilder: (BuildContext context, int pos) {
+              return getRow(context, pos);
+            },
+            itemCount: pages.length,
+          ))),
+    );
   }
 
   Widget getRow(BuildContext context, int i) {
