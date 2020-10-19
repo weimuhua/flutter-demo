@@ -8,7 +8,7 @@ Widget buildView(
     CounterState state, Dispatch dispatch, ViewService viewService) {
   return Scaffold(
     appBar: AppBar(
-      title: Text('BLoC Page'),
+      title: Text('Fish Redux Counter Page'),
     ),
     body: Center(
       child: Text(

@@ -42,10 +42,10 @@ class MyAppPage extends StatelessWidget {
             Navigator.pushNamed(context, Constant.route_list_page);
             break;
           case counter_page:
-//            Navigator.pushNamed(context, Constant.route_counter_page);
-            Navigator.of(context).push(new MaterialPageRoute(builder: (_) {
-              return new CounterPage(666);
-            }));
+            Navigator.pushNamed(context, Constant.route_counter_page);
+//             Navigator.of(context).push(new MaterialPageRoute(builder: (_) {
+//               return new CounterPage(666);
+//             }));
             break;
           case my_page:
             Navigator.pushNamed(context, Constant.route_my_page);
