@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_demo/data/constant.dart';
 
-import 'counter_page.dart';
-
 class MyAppPage extends StatelessWidget {
   static const list_page = 0;
   static const counter_page = 1;

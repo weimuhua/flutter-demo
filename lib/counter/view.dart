@@ -10,11 +10,26 @@ Widget buildView(
     appBar: AppBar(
       title: Text('Fish Redux Counter Page'),
     ),
-    body: Center(
-      child: Text(
-        'You hit me: ${20} times',
-        style: TextStyle(color: Colors.white),
-      ),
+    body: Column(
+      children: [
+        Row(
+          children: [
+            RaisedButton(
+                onPressed: () {
+                  dispatch(CounterActionCreator.onJumpListPage());
+                },
+                child: Text("Test Jump Page")),
+            FlatButton(onPressed: null, child: Text("Button2")),
+            FlatButton(onPressed: null, child: Text("Button3")),
+          ],
+        ),
+        Center(
+          child: Text(
+            'You hit me: ${20} times',
+            style: TextStyle(color: Colors.amber, fontSize: 20),
+          ),
+        ),
+      ],
     ),
     floatingActionButton: FloatingActionButton(
       onPressed: () {
